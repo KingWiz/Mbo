@@ -1,0 +1,36 @@
+﻿@model List<Mbo.Models.Employee>
+@{
+    ViewBag.Title = "index";
+    int sn = 0;
+}
+<style>
+    .empTable{
+        background-color: gainsboro;
+        width: 20%;
+    }
+</style>
+
+<h2>Services</h2>
+<h2>Table</h2>
+
+<table border="1" class="empTable">
+    <tr>
+        <th>ID</th>
+        <th>Name</th>
+        <th>Address</th>
+        <th>Contact</th>
+    </tr>
+    @foreach(var data in Model)
+    {
+    <tr>
+        <td>@(data.empID)</td>
+        <td>@(data.empName)</td>
+        <td>@(data.empAddress)</td>
+        <td>@(data.empContact)</td>
+
+    </tr>
+
+    }
+
+</table>
+
