@@ -9,7 +9,15 @@
     <Property Name="empAddress" Type="nvarchar" MaxLength="50" />
     <Property Name="empContact" Type="nvarchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="Student">
+    <Key>
+      <PropertyRef Name="sID" />
+    </Key>
+    <Property Name="sID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
+    <Property Name="sName" Type="nvarchar" MaxLength="50" />
+  </EntityType>
   <EntityContainer Name="MBOModelStoreContainer">
     <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
   </EntityContainer>
 </Schema>
