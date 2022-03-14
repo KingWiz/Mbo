@@ -12,7 +12,7 @@
 <a href="@Url.Action("Create")">Create</a>
 
 <h2>Services</h2>
-<h2>Table of the day mbo12</h2>
+<h2>Table of the day mbo</h2>
 
 <table border="1" class="empTable">
     <tr>
@@ -20,6 +20,7 @@
         <th>Name</th>
         <th>Address</th>
         <th>Contact</th>
+        <th>Action</th>
     </tr>
     @foreach(var data in Model)
     {
@@ -28,6 +29,7 @@
         <td>@(data.empName)</td>
         <td>@(data.empAddress)</td>
         <td>@(data.empContact)</td>
+        <td><a href="@Url.Action("Edit", new {empID=data.empID})">Edit</a></td>
 
     </tr>
 

@@ -21,6 +21,21 @@ namespace Mbo.Controllers
         {
             return View();
         }
+        public ActionResult Edit(int empid)
+        {
+            Employee data = db.Employees.Find(empid); //find data using primary key
+            //Employee data = db.Employees.FirstOrDefault(x => x.empID == id);
+            return View(data);
+        }
+        public ActionResult UpdateData(Employee Employee)
+        {
+            Employee update = db.Employees.Find(Employee.empID);
+            update.empName = Employee.empName;
+            update.empAddress = Employee.empAddress;
+            db.Entry(update).State = System.Data.Entity.EntityState.Modified;
+            db.SaveChanges();
+            return RedirectToAction("FormWork");
+        }
         public ActionResult SaveData(Employee Employee)
         {
             db.Employees.Add(Employee);
