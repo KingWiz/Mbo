@@ -14,6 +14,7 @@
     <EntitySetMapping Name="Students">
       <EntityTypeMapping TypeName="MBOModel.Student">
         <MappingFragment StoreEntitySet="Student">
+          <ScalarProperty Name="sAddress" ColumnName="sAddress" />
           <ScalarProperty Name="sName" ColumnName="sName" />
           <ScalarProperty Name="sID" ColumnName="sID" />
         </MappingFragment>

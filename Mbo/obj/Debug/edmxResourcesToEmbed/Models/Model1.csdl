@@ -19,5 +19,6 @@
     </Key>
     <Property Name="sID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
     <Property Name="sName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+    <Property Name="sAddress" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
   </EntityType>
 </Schema>

@@ -3,35 +3,64 @@
     ViewBag.Title = "Create";
 }
 <style type="text/css">
-    .prashil{
-        background-color:indigo;
-        height:120px;
-        color:white;
+    .prashil {
+        background-color: indigo;
+        height: 200px;
+        color: white;
     }
-    .aryal{
-        padding-top:20px;
+
+    .aryal {
+        padding-top: 20px;
     }
-    .submitButton{
-        color:indigo;
+
+    .prashil2 {
+        background-color: indigo;
+        height: 200px;
+        color: white;
+    }
+
+    .aryal2 {
+        padding-top: 20px;
+    }
+
+    .submitButton {
+        color: indigo;
     }
 </style>
 
 <h2>Create</h2>
+
 <div class="prashil">
     <form class="aryal" action="SaveData">
+        <h3>Employee</h3>
         <label class="col-md-2">Name</label>
         <div class="col-md-4">
             <input type="text" name="empName" class="form-control" />
-        </div><br/>
+        </div><br />
         <label class="col-md-2">Address</label>
         <div class="col-md-4">
             <input type="text" name="empAddress" class="form-control" />
-        </div><br/>
+        </div><br />
         <label class="col-md-2">Contact</label>
         <div class="col-md-4">
             <input type="text" name="empContact" class="form-control" />
-        </div><br/>
-        <input type="submit" name="Submit" class="submitButton"/>
+        </div><br />
+        <input type="submit" name="SubmitEmp" class="submitButton" />
     </form>
 </div>
-
+<br />
+@using (Html.BeginForm("SaveStdData", "StdTable"))
+{
+<div class="prashil2">
+        <h3>Student</h3>
+        <label class="col-md-2">Name</label>
+        <div class="col-md-4">
+            <input type="text" name="sName" class="form-control" />
+        </div><br />
+        <label class="col-md-2">Address</label>
+        <div class="col-md-4">
+            <input type="text" name="sAddress" class="form-control" />
+        </div><br />
+        <input type="submit" name="SubmitStd" class="submitButton" />
+</div>
+}

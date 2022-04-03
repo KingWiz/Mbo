@@ -15,6 +15,7 @@
     </Key>
     <Property Name="sID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
     <Property Name="sName" Type="nvarchar" MaxLength="50" />
+    <Property Name="sAddress" Type="nvarchar" MaxLength="20" />
   </EntityType>
   <EntityContainer Name="MBOModelStoreContainer">
     <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />

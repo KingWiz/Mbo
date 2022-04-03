@@ -20,6 +20,7 @@
           </Key>
           <Property Name="sID" Type="int" StoreGeneratedPattern="Identity" Nullable="false" />
           <Property Name="sName" Type="nvarchar" MaxLength="50" />
+          <Property Name="sAddress" Type="nvarchar" MaxLength="20" />
         </EntityType>
         <EntityContainer Name="MBOModelStoreContainer">
           <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
@@ -48,6 +49,7 @@
           </Key>
           <Property Name="sID" Type="Int32" Nullable="false" annotation:StoreGeneratedPattern="Identity" />
           <Property Name="sName" Type="String" MaxLength="50" FixedLength="false" Unicode="true" />
+          <Property Name="sAddress" Type="String" MaxLength="20" FixedLength="false" Unicode="true" />
         </EntityType>
       </Schema>
     </edmx:ConceptualModels>
@@ -68,6 +70,7 @@
           <EntitySetMapping Name="Students">
             <EntityTypeMapping TypeName="MBOModel.Student">
               <MappingFragment StoreEntitySet="Student">
+                <ScalarProperty Name="sAddress" ColumnName="sAddress" />
                 <ScalarProperty Name="sName" ColumnName="sName" />
                 <ScalarProperty Name="sID" ColumnName="sID" />
               </MappingFragment>

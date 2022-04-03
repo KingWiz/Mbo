@@ -32,6 +32,7 @@ namespace Mbo.Controllers
             Employee update = db.Employees.Find(Employee.empID);
             update.empName = Employee.empName;
             update.empAddress = Employee.empAddress;
+            update.empContact = Employee.empContact;
             db.Entry(update).State = System.Data.Entity.EntityState.Modified;
             db.SaveChanges();
             return RedirectToAction("FormWork");
