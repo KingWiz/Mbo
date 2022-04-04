@@ -20,5 +20,15 @@
         </MappingFragment>
       </EntityTypeMapping>
     </EntitySetMapping>
+    <EntitySetMapping Name="employee_salary_details">
+      <EntityTypeMapping TypeName="MBOModel.employee_salary_details">
+        <MappingFragment StoreEntitySet="employee_salary_details">
+          <ScalarProperty Name="paidDate" ColumnName="paidDate" />
+          <ScalarProperty Name="salaryPaid" ColumnName="salaryPaid" />
+          <ScalarProperty Name="empID" ColumnName="empID" />
+          <ScalarProperty Name="id" ColumnName="id" />
+        </MappingFragment>
+      </EntityTypeMapping>
+    </EntitySetMapping>
   </EntityContainerMapping>
 </Mapping>

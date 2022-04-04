@@ -27,5 +27,6 @@ namespace Mbo.Models
     
         public virtual DbSet<Employee> Employees { get; set; }
         public virtual DbSet<Student> Students { get; set; }
+        public virtual DbSet<employee_salary_details> employee_salary_details { get; set; }
     }
 }

@@ -6,7 +6,9 @@
     <edmx:Diagrams>
       <Diagram DiagramId="6d589365f7be47ccab4d3920426d9faf" Name="Diagram1">
         <EntityTypeShape EntityType="MBOModel.Employee" Width="1.5" PointX="0.75" PointY="0.75" />
-        <EntityTypeShape EntityType="MBOModel.Student" Width="1.5" PointX="3.375" PointY="0.75" />
+        <EntityTypeShape EntityType="MBOModel.Student" Width="1.5" PointX="4.875" PointY="2" />
+        <EntityTypeShape EntityType="MBOModel.employee_salary_details" Width="1.5" PointX="3" PointY="3.75" />
+        <AssociationConnector Association="MBOModel.FK__employee___empID__5CD6CB2B" />
       </Diagram>
     </edmx:Diagrams>
   </edmx:Designer>

@@ -9,6 +9,15 @@
     <Property Name="empAddress" Type="nvarchar" MaxLength="50" />
     <Property Name="empContact" Type="nvarchar" MaxLength="50" />
   </EntityType>
+  <EntityType Name="employee_salary_details">
+    <Key>
+      <PropertyRef Name="id" />
+    </Key>
+    <Property Name="id" Type="int" Nullable="false" />
+    <Property Name="empID" Type="int" />
+    <Property Name="salaryPaid" Type="decimal" Precision="18" Scale="2" />
+    <Property Name="paidDate" Type="datetime" />
+  </EntityType>
   <EntityType Name="Student">
     <Key>
       <PropertyRef Name="sID" />
@@ -17,8 +26,25 @@
     <Property Name="sName" Type="nvarchar" MaxLength="50" />
     <Property Name="sAddress" Type="nvarchar" MaxLength="20" />
   </EntityType>
+  <Association Name="FK__employee___empID__5CD6CB2B">
+    <End Role="Employee" Type="Self.Employee" Multiplicity="0..1" />
+    <End Role="employee_salary_details" Type="Self.employee_salary_details" Multiplicity="*" />
+    <ReferentialConstraint>
+      <Principal Role="Employee">
+        <PropertyRef Name="empID" />
+      </Principal>
+      <Dependent Role="employee_salary_details">
+        <PropertyRef Name="empID" />
+      </Dependent>
+    </ReferentialConstraint>
+  </Association>
   <EntityContainer Name="MBOModelStoreContainer">
     <EntitySet Name="Employee" EntityType="Self.Employee" Schema="dbo" store:Type="Tables" />
+    <EntitySet Name="employee_salary_details" EntityType="Self.employee_salary_details" Schema="dbo" store:Type="Tables" />
     <EntitySet Name="Student" EntityType="Self.Student" Schema="dbo" store:Type="Tables" />
+    <AssociationSet Name="FK__employee___empID__5CD6CB2B" Association="Self.FK__employee___empID__5CD6CB2B">
+      <End Role="Employee" EntitySet="Employee" />
+      <End Role="employee_salary_details" EntitySet="employee_salary_details" />
+    </AssociationSet>
   </EntityContainer>
 </Schema>
